@@ -1,0 +1,82 @@
+
+<h3 style="color:red;">Enter the Recipe Details</h3>
+<hr>
+<br>
+<form method="post" action="/create/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <style>
+        input[type = text] {
+           width: 11%;
+           padding: 2px 5px;
+           margin: 5px 0;
+           box-sizing: border-box;
+        }
+        input[type = text], select {
+              width: 20%;
+              padding: 8px 8px;
+              margin: 6px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 2px;
+              box-sizing: border-box;
+            }
+
+            input[type = password] {
+              width: 20%;
+              padding: 8px 8px;
+              margin: 6px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 2px;
+              box-sizing: border-box;
+            }
+            input[type=submit]{
+            width: 5%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 8px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 5px;
+
+}
+        .button {
+  background-color: #0a04aa;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+     </style>
+<div>
+     
+    Name = <input type="text" name="recipe_name"><br>
+    Ingredients = <input type="text" name="ingredients"><br>
+    Process = <input type="text" name="process"><br>
+    Image = <input type="file" name="image"><br>
+    <input type="submit" value="Save">
+
+  </div>
+</form>
+<br>
+<a href="/logout/" class="button" type="submit">Logout</a>
+<hr>
+<br>
+<a href="/recipe_list/" class="button" type="submit">Cancel</a>
+

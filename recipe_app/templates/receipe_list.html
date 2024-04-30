@@ -1,0 +1,57 @@
+
+  <title>Food Management System</title>
+
+
+<h1 style="color:rgb(136, 0, 255);">List of Recipes</h1>
+<style>
+    input[type = text] {
+       width: 11%;
+       padding: 2px 5px;
+       margin: 5px 0;
+       box-sizing: border-box;
+    }
+    ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffffff;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  display:block;
+  margin-right: 670px;
+  margin-left: 700px;
+
+}
+
+ </style>
+ <ol>
+{% if recipe_objects %}
+
+    {% for item in recipe_objects %}<li>
+        <a href="{% url 'details' item.id %}">{{ item.recipe_name }}</a></li>  <br>
+    {% endfor %}
+
+{% else %}
+    <h3>No Recipes Found</h3>
+{% endif %}
+</ol>
+<br>
+<br>
+<hr><br>
+<a href="/create/" class="button">Add Receipe</a>

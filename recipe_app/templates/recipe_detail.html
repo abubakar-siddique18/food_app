@@ -1,0 +1,40 @@
+<h1>Recipe Details  </h1>
+{{ recipe_object.recipe_name }}
+Name : {{ recipe_objects.recipe_name }}<br>
+
+Ingredients : {{recipe_objects.ingredients}}<br>
+
+Process : {{recipe_objects.process}}<br>
+
+Image :<br>
+
+<style>
+    img {
+  display: block;
+  margin-left:100px;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  
+}
+.button {
+  background-color: #6204aa;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+<img src="/media/{{recipe_objects.image1}}" style="width:300px">
+
+<br>
+<hr>
+<br>
+<a href="/recipe_list/" class="button">Back</a>
